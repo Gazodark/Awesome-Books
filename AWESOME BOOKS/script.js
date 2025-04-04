@@ -16,26 +16,26 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    function addBook(event) {
-        event.preventDefault();
-        const title = titleInput.value.trim();
-        const author = authorInput.value.trim();
+    // function addBook(event) {
+    //     event.preventDefault();
+    //     const title = titleInput.value.trim();
+    //     const author = authorInput.value.trim();
 
-        if (title && author) {
-            books.push({ title, author });
-            localStorage.setItem("books", JSON.stringify(books));
-            titleInput.value = "";
-            authorInput.value = "";
-            displayBooks();
-        }
-    }
+    //     if (title && author) {
+    //         books.push({ title, author });
+    //         localStorage.setItem("books", JSON.stringify(books));
+    //         titleInput.value = "";
+    //         authorInput.value = "";
+    //         displayBooks();
+    //     }
+    // }
 
-    window.removeBook = function(index) {
-        books.splice(index, 1);
-        localStorage.setItem("books", JSON.stringify(books));
-        displayBooks();
-    };
+    // window.removeBook = function(index) {
+    //     books.splice(index, 1);
+    //     localStorage.setItem("books", JSON.stringify(books));
+    //     displayBooks();
+    // };
 
-    bookForm.addEventListener("submit", addBook);
-    displayBooks();
+    // bookForm.addEventListener("submit", addBook);
+    // displayBooks();
 });
