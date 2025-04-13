@@ -1,30 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome Books</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Awesome Books</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container">
-        <h1>Awesome Books</h1>
-        
-        <div id="book-list">
-            <h2>Books List</h2>
-            <ul id="books"></ul>
-        </div>
-
-        <div id="add-book">
-            <h2>Add a new book</h2>
-            <form id="book-form">
-                <input type="text" id="title" placeholder="Book Title" required>
-                <input type="text" id="author" placeholder="Author" required>
-                <button type="submit">Add Book</button>
-            </form>
-        </div>
+  <header>
+    <div class="header-container">
+      <h1>Awesome Books</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#" id="nav-list">List</a></li>
+          <li><span>|</span></li>
+          <li><a href="#" id="nav-add">Add new</a></li>
+          <li><span>|</span></li>
+          <li><a href="#" id="nav-contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
+  <div id="date-time" class="date-time"></div>
 
-    <script src="script.js"></script>
+  <main>
+    <section id="book-list-section" class="content-section">
+      <h2>All awesome books</h2>
+      <div id="book-list"></div>
+    </section>
+
+    <section id="add-book-section" class="content-section hidden">
+      <h2>Add a new book</h2>
+      <form id="add-book-form">
+        <input type="text" id="title" placeholder="Title" required />
+        <input type="text" id="author" placeholder="Author" required />
+        <button type="submit">Add</button>
+      </form>
+    </section>
+
+    <section id="contact-section" class="content-section hidden">
+      <h2>Contact information</h2>
+      <p>Do have any questions or just want to say "Hello"?<br>You can reach out to us!</p>
+      <ul>
+        <li>Our e-mail: <a href="mailto:yvanbryandongmoyemeli@gmail.com">yvanbryandongmoyemeli@gmail.com</a></li>
+        <li>Our phone number: +237 69179510</li>
+        <li>Our address: Yaounde , Cameroon</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy;2025 Awesome Books by Yvan Bryan. All rights reserved</p>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>

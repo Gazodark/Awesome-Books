@@ -1,69 +1,112 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #dfea51;
   margin: 0;
   padding: 0;
-  text-align: center;
-}
-
-.container {
-  max-width: 600px;
-  margin: 20px auto;
-  background: rgb(9, 245, 44);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1,
-h2 {
+  background-color: #f9f9f9;
   color: #333;
 }
 
-input {
-  width: 90%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-button {
-  padding: 10px 15px;
-  border: none;
-  background: #007bff;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #0056b3;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  background: #65dbf3;
-  padding: 10px;
-  margin: 5px 0;
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
 }
 
-.remove-btn {
-  background: rgb(89, 0, 255);
-  color: rgb(118, 113, 113);
+.header-container h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  color: white;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.date-time {
+  text-align: right;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  color: #333;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.content-section {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.book-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e0f7fa;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #00acc1;
+  border-radius: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  padding: 10px;
+  background: #00796b;
+  color: #fff;
   border: none;
-  padding: 5px 10px;
+  border-radius: 4px;
   cursor: pointer;
-  border-radius: 3px;
 }
 
-.remove-btn:hover {
-  background: darkred;
+form button:hover {
+  background: #004d40;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  margin-top: 2rem;
+  border-top: 1px solid #ccc;
 }
