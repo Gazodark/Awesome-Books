@@ -10,8 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
     bookList.innerHTML = '';
     books.forEach((book, index) => {
       const li = document.createElement('li');
-      li.innerHTML = `"${book.title}" by ${book.author} 
-                <button class="remove-btn" onclick="removeBook(${index})">Remove</button>`;
+      li.innerHTML = `"${book.title}" by ${book.author}`;
+      const removeButton = document.createElement('button');
+      removeButton.textContent = 'Remove';
+      removeButton.className = 'remove-btn';
+      removeButton.addEventListener('click', () => removeBook(index));
+      li.appendChild(removeButton);
       bookList.appendChild(li);
     });
   }
