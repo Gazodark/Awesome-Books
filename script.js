@@ -10,12 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     bookList.innerHTML = '';
     books.forEach((book, index) => {
       const li = document.createElement('li');
-      li.innerHTML = `"${book.title}" by ${book.author}`;
-      const removeButton = document.createElement('button');
-      removeButton.textContent = 'Remove';
-      removeButton.className = 'remove-btn';
-      removeButton.addEventListener('click', () => removeBook(index));
-      li.appendChild(removeButton);
+      li.innerHTML = `"${book.title}" by ${book.author} 
+                <button class="remove-btn" onclick="removeBook(${index})">Remove</button>`;
       bookList.appendChild(li);
     });
   }
@@ -37,7 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
   window.removeBook = function (index) {
     books.splice(index, 1);
     localStorage.setItem('books', JSON.stringify(books));
+    // Ensure the displayBooks function is called to update the UI after removing a book
     displayBooks();
+
+    // Resolve any potential merge conflicts by ensuring the localStorage is updated correctly
+    const resolvedBooks = JSON.parse(localStorage.getItem('books')) || [];
+    if (resolvedBooks.length !== books.length) {
+      localStorage.setItem('books', JSON.stringify(books));
+    }
   };
 
   bookForm.addEventListener('submit', addBook);
