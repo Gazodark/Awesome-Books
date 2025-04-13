@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const author = authorInput.value.trim();
 
     if (title && author) {
-      books.push({ title, author });
+      books.push({ title, author }); // Keep the local behavior
       localStorage.setItem('books', JSON.stringify(books));
       titleInput.value = '';
       authorInput.value = '';
